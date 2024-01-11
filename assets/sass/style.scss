@@ -1,0 +1,174 @@
+@import "./colors.scss";
+body {
+  width: 100vw;
+  font-family: "onest";
+  font-size: 20px;
+  color: $text;
+  background: $background1;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+.header {
+  &_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    .logo {
+      h1 {
+        color: $accent;
+        font-family: "Next Art";
+        text-transform: uppercase;
+      }
+    }
+    .nav {
+      ul {
+        display: flex;
+        gap: 5rem;
+        li {
+          a {
+            font-size: 1.1rem;
+            color: $text;
+						text-wrap: nowrap;
+          }
+        }
+      }
+      .active {
+        color: $accent;
+      }
+    }
+    .icon-sidebar:hover {
+      img {
+        transition: transform 0.2s ease-in-out;
+        margin: 0;
+      }
+      img:active {
+        transform: scale(0.9);
+        transition: transform 0.1s ease-in-out;
+      }
+    }
+    .sidebar {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #f2f2f2;
+      transition: right 0.5s ease;
+      background: $background1;
+      padding: 50px;
+      transition: right 0.5s ease;
+      z-index: 2;
+      span:active {
+        transform: rotate(100deg);
+        transition: 0.1s ease;
+        color: $accent;
+      }
+      span {
+        cursor: pointer;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        input {
+          display: block;
+          width: 250px;
+          height: 30px;
+          border-radius: 10px;
+          padding: 5px 10px;
+          font-size: 1rem;
+          border: 0;
+          margin: 15px 0;
+        }
+        textarea {
+          display: block;
+          width: 250px;
+          height: 100px;
+          border-radius: 10px;
+          padding: 10px;
+          border: 0;
+          margin-top: 10px;
+          font-size: 1rem;
+        }
+        label {
+          color: $accent;
+        }
+        .btn-sider {
+          padding: 10px 20px;
+          font-weight: 600;
+          width: 200px;
+          height: 50px;
+          font-size: 1.3rem;
+          color: gray;
+          cursor: pointer;
+        }
+        .btn-sider:hover {
+          background: $accent;
+          color: #fff;
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}
+//Greting
+
+.greting {
+  &_content {
+    display: flex;
+    gap: 150px;
+  }
+  &_prevew {
+    #skill {
+      width: 450px;
+      position: absolute;
+      right: 250px;
+      margin: 0;
+      padding: 0;
+      top: 150px;
+    }
+    #neon {
+      width: 500px;
+      position: absolute;
+      right: 200px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &_title {
+    width: 40%;
+    margin-top: 100px;
+    span {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 2rem;
+    }
+    h2 {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 2.5rem;
+    }
+    button {
+      background-color: orange;
+      border: 0;
+      border-radius: 10px;
+      padding: 15px 25px;
+      a {
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+      }
+      a:hover {
+        color: #fff;
+        transition: 0.3s ease;
+      }
+    }
+  }
+}

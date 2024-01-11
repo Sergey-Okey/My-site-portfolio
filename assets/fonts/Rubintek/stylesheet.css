@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'rubintek';
+    src: url('rubintek-Italic.eot');
+    src: local('rubintek Italic'), local('rubintek-Italic'),
+        url('rubintek-Italic.eot?#iefix') format('embedded-opentype'),
+        url('rubintek-Italic.woff2') format('woff2'),
+        url('rubintek-Italic.woff') format('woff'),
+        url('rubintek-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'rubintek';
+    src: url('rubintek.eot');
+    src: local('rubintek'),
+        url('rubintek.eot?#iefix') format('embedded-opentype'),
+        url('rubintek.woff2') format('woff2'),
+        url('rubintek.woff') format('woff'),
+        url('rubintek.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

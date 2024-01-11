@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/assets/fonts/Rubintek/stylesheet.css">
+	<link rel="stylesheet" href="/assets/fonts/NexArt/stylesheet.css">
+	<link rel="stylesheet" href="/assets/fonts/Onest/stylesheet.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<script src="/assets/js/scripts.js"></script>
+</head>
+
+<title>SOK | Главная</title>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="header_content">
+				<div class="logo">
+					<h1>S<>K</h1>
+				</div>
+				<nav class="nav" id="nav">
+					<ul>
+						<li><a href="index.html" class="active">Главная</a></li>
+						<li><a href="about.html">Обо мне</a></li>
+						<li><a href="projects.html">Проекты</a></li>
+						<li><a href="contact.html">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="icon-sidebar" onclick="openSidebar()">
+					<img src="/assets/images/header/sidebar-icon.png" alt="sidebar-icon" style="width: 40px;">
+				</div>
+
+				<div class="sidebar">
+					<span class="close-btn" onclick="closeSidebar()" style="float: right;">✖</span>
+					<h2>Обратная связь</h2>
+					<form action="feedback.php" method="post">
+						<div class="form-group">
+							<label for="name">Имя:</label>
+							<input type="text" name="name" id="name" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="email" name="email" id="email" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label for="message">Сообщение:</label>
+							<textarea name="message" id="message" class="form-control" required></textarea>
+						</div>
+						<input type="submit" value="Отправить" class="btn-sider">
+					</form>
+				</div>
+
+			</div>
+		</header>
+		<main>
+			<div class="greting">
+				<div class="greting_content">
+					<div class="greting_title">
+						<span>Привет!</span>
+						<h2>Меня зовут <br> Сергей Борисов</h2>
+						<p>Я занимаюсь веб-дизайном, frontend разработкой уже год. Вам нужен дизайн сайта, верстка сайта или, может
+							быть, сайт "под ключ"? Тогда свяжитесь со мной.</p>
+						<button>
+							<a href="tel:+79961647574">Написать</a>
+						</button>
+					</div>
+					<div class="greting_prevew">
+						<img id="neon" src="/assets/images/greting/Ellipse 1.png" alt="Ellipse1">
+						<img id="skill" src="/assets/images/greting/Group 2.png" alt="Group2">
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer></footer>
+	</div>
+</body>
+
+</html>
