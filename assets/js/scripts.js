@@ -8,11 +8,16 @@ function openSidebar() {
 }
 
 function closeSidebar() {
+	// Переместите присвоение обработчика события за пределы функции closeSidebar
 	document.querySelector('.close-btn').addEventListener('click', function () {
 		document.querySelector('.sidebar').style.display = 'none';
 		isOpen = false;
 	});
 }
 
-// Вызываем функцию closeSidebar для добавления обработчика события
-closeSidebar();
+// Вызовите функцию closeSidebar после полной загрузки DOM
+document.addEventListener('DOMContentLoaded', function () {
+	closeSidebar();
+});
+
+//CaruselPortfolio

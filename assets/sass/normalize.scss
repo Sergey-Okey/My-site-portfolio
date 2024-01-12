@@ -28,9 +28,7 @@ body {
  * Render the `main` element consistently in IE.
  */
 
-main {
-  display: block;
-}
+
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -343,13 +341,5 @@ summary {
  */
 
 template {
-  display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-
-[hidden] {
   display: none;
 }
