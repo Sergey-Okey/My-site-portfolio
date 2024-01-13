@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href=".//assets/fonts/Onest/stylesheet.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<script src=".//assets/js/scripts.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -20,14 +21,16 @@
 		<header class="header">
 			<div class="header_content">
 				<div class="logo">
-					<h1>S<>K</h1>
+					<h1>
+						S<span class="rotateSymbol">&lt;&gt;</span>K
+					</h1>
 				</div>
 				<nav class="nav" id="nav">
 					<ul>
-						<li><a href="index.html" class="active">Главная</a></li>
-						<li><a href="about.html">Обо мне</a></li>
-						<li><a href="projects.html">Проекты</a></li>
-						<li><a href="contact.html">Контакты</a></li>
+						<li><a href="index.html" onclick="activateLink(this)">Главная</a></li>
+						<li><a href="about.html" onclick="activateLink(this)">Обо мне</a></li>
+						<li><a href="projects.html" onclick="activateLink(this)">Проекты</a></li>
+						<li><a href="contact.html" onclick="activateLink(this)">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="icon-sidebar" onclick="openSidebar()">
@@ -79,34 +82,34 @@
 		<div class="skills_content">
 			<div class="skills_list">
 				<div class="skills_item">
-					<img src="" alt="">
+					<img src="/assets/images/skills/html.png" alt="">
 					<span>Html</span>
 				</div>
 				<div class="skills_item">
-					<img src="" alt="">
+					<img src="/assets/images/skills/css.png" alt="">
 					<span>Css</span>
 				</div>
 				<div class="skills_item">
-					<img src="" alt="">
+					<img src="/assets/images/skills/js.png" alt="">
 					<span>Js</span>
 				</div>
 				<div class="skills_item">
-					<img src="" alt="">
+					<img src="/assets/images/skills/react.png" alt="">
 					<span>React</span>
 				</div>
 			</div>
 			<div class="skills_list">
 				<div class="skills_item">
-					<img src="" alt="">
+					<img src="/assets/images/skills/bootstrap.png" alt="">
 					<span>Bootstrap</span>
 				</div>
 				<div class="skills_item">
-					<img src="" alt="">
+					<img src="/assets/images/skills/node.png" alt="">
 					<span>Node</span>
 				</div>
 				<div class="skills_item">
-					<img src="" alt="">
-					<span>Scss</span>
+					<img src="/assets/images/skills/sass.png" alt="">
+					<span>Sass</span>
 				</div>
 			</div>
 		</div>
@@ -118,37 +121,61 @@
 	</article>
 
 	<article class="portfolio">
-		<div class="slider-content">
-			<div class="slider-single">
-				<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				<h1 class="slider-single-title">Through the Mountains</h1>
+		<div class="portfolio_container">
+			<div class="portfolio_item">
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/your-climat.png" alt="">
+				</div>
+				<div class="item_title">
+					<h1>Лендинг</h1>
+					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
+						родного точках однажды пунктуация заглавных эта злых мир.</p>
+					<button><a href="ваш-климат.online">Перейти</a></button>
+				</div>
 			</div>
-
-			<div class="slider-single">
-				<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				<h1 class="slider-single-title">Through the Mountains</h1>
+			<div class="portfolio_item">
+				<div class="item_title">
+					<h1>Лендинг</h1>
+					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
+						родного точках однажды пунктуация заглавных эта злых мир.</p>
+					<button><a href="ваш-климат.online">Перейти</a></button>
+				</div>
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/your-climat.png" alt="">
+				</div>
 			</div>
-
-			<div class="slider-single">
-				<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				<h1 class="slider-single-title">Through the Mountains</h1>
+			<div class="portfolio_item">
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/your-climat.png" alt="">
+				</div>
+				<div class="item_title">
+					<h1>Корпоративный</h1>
+					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
+						родного точках однажды пунктуация заглавных эта злых мир.</p>
+					<button><a href="ваш-климат.online">Перейти</a></button>
+				</div>
 			</div>
-
-
-			<div class="slider-single">
-				<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				<h1 class="slider-single-title">Through the Mountains</h1>
+			<div class="portfolio_item">
+				<div class="item_title">
+					<h1>Визитка</h1>
+					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
+						родного точках однажды пунктуация заглавных эта злых мир.</p>
+					<button><a href="ваш-климат.online">Перейти</a></button>
+				</div>
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/your-climat.png" alt="">
+				</div>
 			</div>
-
-
-			<div class="slider-single">
-				<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				<h1 class="slider-single-title">Through the Mountains</h1>
-			</div>
-
-			<div class="slider-single">
-				<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				<h1 class="slider-single-title">Through the Mountains</h1>
+			<div class="portfolio_item">
+				<div class="item_img">
+					<img src=".//assets/images/portfolio/your-climat.png" alt="">
+				</div>
+				<div class="item_title">
+					<h1>Лендинг</h1>
+					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
+						родного точках однажды пунктуация заглавных эта злых мир.</p>
+					<button><a href="https://ваш-климат.online">Перейти</a></button>
+				</div>
 			</div>
 		</div>
 	</article>
