@@ -27,6 +27,7 @@ body {
 	color: $text;
 	background: $background1 no-repeat;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 .container {
@@ -291,6 +292,42 @@ body {
 	}
 }
 
+//About
+
+.about {
+	width: 100%;
+	display: flex;
+	padding: 100px 0;
+
+	&_container {
+		width: 70%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		gap: 2rem;
+	}
+
+	.item_container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	.item {
+		display: flex;
+		border-radius: 10px;
+		box-shadow: 0px 0px 5px 0px $accent;
+		padding: 20px;
+		width: 200px;
+	}
+	.about_items{
+		width: 50%;
+	}
+	.about_title{
+		width: 50%;
+	}
+}
+
 //Portfolio
 .portfolio {
 	width: 100%;
@@ -356,5 +393,4 @@ body {
 			}
 		}
 	}
-
 }
