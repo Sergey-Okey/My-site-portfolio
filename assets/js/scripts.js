@@ -58,3 +58,72 @@ document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener("scroll", checkVisibility);
 	checkVisibility();
 });
+
+//Animation about item
+
+document.addEventListener("DOMContentLoaded", function () {
+	var items = document.querySelectorAll(".item");
+
+	function checkScroll() {
+		var windowHeight = window.innerHeight;
+
+		items.forEach(function (item) {
+			var bounding = item.getBoundingClientRect();
+
+			if (bounding.top >= 0 && bounding.top <= windowHeight) {
+				item.style.opacity = "1";
+				item.style.transform = "translateX(0)";
+			}
+		});
+	}
+
+	window.addEventListener("scroll", checkScroll);
+	checkScroll(); // проверка при загрузке страницы
+});
+
+//Logo About
+
+document.addEventListener("DOMContentLoaded", function () {
+	var aboutTitle = document.querySelector(".about_title");
+
+	function isElementInViewport(el) {
+		var rect = el.getBoundingClientRect();
+		return (
+			rect.top >= 0 &&
+			rect.left >= 0 &&
+			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		);
+	}
+
+	function animateOnScroll() {
+		if (isElementInViewport(aboutTitle)) {
+			aboutTitle.style.opacity = 1;
+			aboutTitle.style.transform = "translateX(0)";
+			window.removeEventListener("scroll", animateOnScroll);
+		}
+	}
+
+	window.addEventListener("scroll", animateOnScroll);
+});
+
+//Scrol To Top
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+	var button = document.getElementById("button_scroll");
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		button.style.display = "block";
+	} else {
+		button.style.display = "none";
+	}
+}
+
+function scrollToTop() {
+	var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+	if (currentPosition > 0) {
+		window.requestAnimationFrame(scrollToTop);
+		window.scrollTo(0, currentPosition - currentPosition / 8);
+	}
+}
