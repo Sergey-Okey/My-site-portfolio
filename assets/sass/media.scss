@@ -11,6 +11,10 @@
 		width: 95%;
 	}
 
+	main {
+		overflow-x: hidden;
+	}
+
 	.greting_content {
 		width: 95%;
 		flex-direction: column;
@@ -18,14 +22,14 @@
 
 		.greting_prevew {
 			position: absolute;
-			z-index: 1;
+			z-index: -1;
 			opacity: 20%;
 			margin: 0;
 			width: 100%;
 
 			#neon {
+				width: 400px;
 				justify-content: center;
-				left: -23%;
 			}
 
 			#skill {
@@ -65,7 +69,6 @@
 
 	.portfolio {
 		padding: 50px 0;
-		overflow: hidden;
 
 		.portfolio_item {
 			flex-wrap: wrap;
