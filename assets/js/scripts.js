@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				// Применяем анимацию
 				item.style.transition = "opacity 0.9s, transform 0.5s";
 				item.style.opacity = 1;
-				item.style.transform = "translateX(0)";
+				item.style.transform = "translateX(-11%)";
 			} else {
 				// Возвращаем не видимые элементы в центр
 				item.style.transition = "none";
@@ -78,7 +78,7 @@ function scrollToTop() {
 
 	if (currentPosition > 0) {
 		window.requestAnimationFrame(scrollToTop);
-		window.scrollTo(0, currentPosition - currentPosition / 8);
+		window.scrollTo(0, currentPosition - currentPosition / 10);
 	}
 }
 

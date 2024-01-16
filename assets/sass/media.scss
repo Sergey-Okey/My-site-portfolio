@@ -1,5 +1,115 @@
 @media only screen and (max-width: 767px) {
-	.container {
+	body {
+		width: 100%;
+		margin: 0;
+		overflow-x: hidden;
+	}
+
+	;
+
+	.header_content {
 		width: 95%;
+	}
+
+	.greting_content {
+		width: 95%;
+		flex-direction: column;
+		gap: 0;
+
+		.greting_prevew {
+			position: absolute;
+			z-index: 1;
+			opacity: 20%;
+			margin: 0;
+			width: 100%;
+
+			#neon {
+				justify-content: center;
+				left: -23%;
+			}
+
+			#skill {
+				display: none;
+			}
+		}
+
+		.greting_title {
+			width: 100%;
+		}
+	}
+
+	.header_content {
+		.nav {
+			display: none;
+		}
+	}
+
+	.skills {
+		width: 100%;
+		padding: 20px 0;
+
+		.skills_content {
+			width: 100%;
+		}
+
+		.skills_list {
+			width: 100%;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			.skills_item {
+				width: 150px;
+			}
+		}
+	}
+
+	.portfolio {
+		padding: 50px 0;
+		overflow: hidden;
+
+		.portfolio_item {
+			flex-wrap: wrap;
+		}
+
+		.item_img {
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.about {
+		padding: 50px 0;
+		width: 95%;
+
+		.about_container {
+			width: 100%;
+		}
+
+		.about_items {
+			#yellow {
+				width: 90%;
+				left: 0;
+			}
+		}
+	}
+
+	.footer {
+		box-shadow: 0;
+		margin: 0;
+
+		.section_nav {
+			flex-wrap: wrap;
+		}
+
+		.section_link {
+			width: 100%;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		.section_link span {
+			text-align: center;
+		}
 	}
 }

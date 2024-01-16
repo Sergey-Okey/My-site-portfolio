@@ -31,22 +31,19 @@ body {
 	scroll-behavior: smooth;
 }
 
-.container {
-	width: 70%;
-	margin: 0 auto;
-}
-
 .header_content {
 	display: flex;
+	width: 70%;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 1rem;
+	margin: 0 auto;
 
 	.logo {
-		h1 a{
+		h1 a {
 			color: $accent;
 			font-family: "Next Art";
 			text-transform: uppercase;
+			text-wrap: nowrap;
 		}
 	}
 
@@ -181,6 +178,8 @@ body {
 
 .greting_content {
 	display: flex;
+	width: 70%;
+	margin: auto;
 	gap: 100px;
 }
 
