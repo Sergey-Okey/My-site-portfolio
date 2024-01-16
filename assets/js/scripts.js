@@ -20,15 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	closeSidebar();
 });
 
-//Active Link Header
-function activateLink(link) {
-	var links = document.querySelectorAll('.menu a'); // Получаем все ссылки в меню
-	links.forEach(function (item) {
-		item.classList.remove('active'); // Удаляем класс "active" у всех ссылок
-	});
-	link.classList.add('active'); // Добавляем класс "active" к ссылке, на которую нажали
-}
-
 //Skills Animation
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -81,32 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	checkScroll(); // проверка при загрузке страницы
 });
 
-//Logo About
-
-document.addEventListener("DOMContentLoaded", function () {
-	var aboutTitle = document.querySelector(".about_title");
-
-	function isElementInViewport(el) {
-		var rect = el.getBoundingClientRect();
-		return (
-			rect.top >= 0 &&
-			rect.left >= 0 &&
-			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-		);
-	}
-
-	function animateOnScroll() {
-		if (isElementInViewport(aboutTitle)) {
-			aboutTitle.style.opacity = 1;
-			aboutTitle.style.transform = "translateX(0)";
-			window.removeEventListener("scroll", animateOnScroll);
-		}
-	}
-
-	window.addEventListener("scroll", animateOnScroll);
-});
-
 //Scrol To Top
 function scrollToTop() {
 	var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
@@ -116,3 +81,91 @@ function scrollToTop() {
 		window.scrollTo(0, currentPosition - currentPosition / 8);
 	}
 }
+
+// Animation Skills_item
+
+document.addEventListener("DOMContentLoaded", function () {
+	var skillsItems = document.querySelectorAll('.skills_item');
+
+	function fadeInElements() {
+		skillsItems.forEach(function (item, index) {
+			setTimeout(function () {
+				item.style.opacity = '1';
+				item.style.transform = 'translateY(0)';
+			}, index * 300); // Измените значение задержки, если необходимо
+		});
+	}
+
+	function checkVisibility() {
+		skillsItems.forEach(function (item) {
+			var itemPosition = item.getBoundingClientRect().top;
+			var windowHeight = window.innerHeight;
+
+			if (itemPosition - windowHeight <= 0) {
+				fadeInElements();
+			}
+		});
+	}
+
+	window.addEventListener('scroll', checkVisibility);
+
+	// Вызовем функцию при загрузке страницы для проверки видимости блоков
+	checkVisibility();
+});
+
+//Animation Text in Greting
+
+document.addEventListener("DOMContentLoaded", function () {
+	// Возможно, вы захотите добавить дополнительные проверки видимости перед запуском анимации
+
+	var letters = document.querySelectorAll('.animated-letter');
+	var heading = document.querySelector('.animated-heading');
+	var paragraph = document.querySelector('.animated-paragraph');
+	var button = document.querySelector('.animated-button');
+
+	function fadeInElements() {
+		letters.forEach(function (letter, index) {
+			setTimeout(function () {
+				letter.style.opacity = '1';
+				letter.style.transform = 'translateY(0)';
+			}, index * 100);
+		});
+
+		setTimeout(function () {
+			heading.style.opacity = '1';
+			heading.style.transform = 'translateY(0)';
+		}, 1000);
+
+		setTimeout(function () {
+			paragraph.style.opacity = '1';
+			paragraph.style.transform = 'translateY(0)';
+		}, 1500);
+
+		setTimeout(function () {
+			button.style.opacity = '1';
+			button.style.transform = 'translateY(0)';
+		}, 2000);
+	}
+
+	fadeInElements();
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	// Обработчик событий для всех якорных ссылок
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			const targetId = this.getAttribute('href').substring(1);
+			const targetElement = document.getElementById(targetId);
+
+			if (targetElement) {
+				window.scrollTo({
+					top: targetElement.offsetTop,
+					behavior: 'smooth'
+				});
+			}
+		});
+	});
+});

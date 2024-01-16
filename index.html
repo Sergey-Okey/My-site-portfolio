@@ -5,37 +5,38 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SOK | Главная</title>
-	<link rel="stylesheet" href=".//css/media.css">
-	<link rel="stylesheet" href=".//css/style.css">
-	<link rel="stylesheet" href=".//css/normalize.css">
-	<link rel="stylesheet" href=".//assets/fonts/Rubintek/stylesheet.css">
-	<link rel="stylesheet" href=".//assets/fonts/NexArt/stylesheet.css">
-	<link rel="stylesheet" href=".//assets/fonts/Onest/stylesheet.css">
+	<link rel="stylesheet" href="/css/media.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/assets/fonts/Rubintek/stylesheet.css">
+	<link rel="stylesheet" href="/assets/fonts/NexArt/stylesheet.css">
+	<link rel="stylesheet" href="/assets/fonts/Onest/stylesheet.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-	<script src=".//assets/js/scripts.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="/assets/js/scripts.js"></script>
 </head>
 
 <body>
+
 	<div class="container">
 		<header class="header">
 			<div class="header_content">
 				<div class="logo">
 					<h1>
-						S<span class="rotateSymbol">&lt;&gt;</span>K
+						<a href="index.html">S<span class="rotateSymbol">&lt;&gt;</span>K</a>
 					</h1>
 				</div>
 				<nav class="nav" id="nav">
 					<ul>
 						<li><a href="index.html" onclick="activateLink(this)">Главная</a></li>
-						<li><a href="about.html" onclick="activateLink(this)">Обо мне</a></li>
-						<li><a href="projects.html" onclick="activateLink(this)">Проекты</a></li>
-						<li><a href="contact.html" onclick="activateLink(this)">Контакты</a></li>
+						<li><a href="#about" onclick="activateLink(this)">Обо мне</a></li>
+						<li><a href="#product" onclick="activateLink(this)">Проекты</a></li>
+						<li><a href="#contact" onclick="activateLink(this)">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="icon-sidebar" onclick="openSidebar()">
-					<img src=".//assets/images/header/sidebar-icon.png" alt="sidebar-icon" style="width: 40px;">
+					<img src="/assets/images/header/sidebar-icon.png" alt="sidebar-icon" style="width: 40px;">
 				</div>
 
 				<div class="sidebar">
@@ -59,26 +60,34 @@
 				</div>
 			</div>
 		</header>
+
 		<main>
 			<div class="greting">
 				<div class="greting_content">
 					<div class="greting_title">
-						<span>Привет!</span>
-						<h2>Меня зовут <br> Сергей Борисов</h2>
-						<p>Я занимаюсь веб-дизайном, frontend разработкой уже год. Вам нужен дизайн сайта, верстка сайта или,
-							может
-							быть, сайт "под ключ"? Тогда свяжитесь со мной.</p>
-						<button>
+						<span class="animated-letter" style="animation-delay: 0.5s">П</span>
+						<span class="animated-letter" style="animation-delay: 1s">р</span>
+						<span class="animated-letter" style="animation-delay: 1.5s">и</span>
+						<span class="animated-letter" style="animation-delay: 2s">в</span>
+						<span class="animated-letter" style="animation-delay: 2.5s">е</span>
+						<span class="animated-letter" style="animation-delay: 3s">т</span>
+						<span class="animated-letter" style="animation-delay: 3.5s">!</span>
+						<h2 class="animated-heading" style="animation-delay: 4s">Меня зовут <br> Сергей Борисов</h2>
+						<p class="animated-paragraph" style="animation-delay: 4.5s">Я занимаюсь веб-дизайном, frontend разработкой
+							уже год. Вам нужен дизайн сайта, верстка сайта или, может быть, сайт "под ключ"? Тогда свяжитесь со мной.
+						</p>
+						<button class="animated-button" style="animation-delay: 5s">
 							<a href="tel:+79961647574">Написать</a>
 						</button>
 					</div>
 					<div class="greting_prevew">
-						<img id="neon" src=".//assets/images/greting/Ellipse 1.png" alt="Ellipse1">
-						<img id="skill" src=".//assets/images/greting/Group 2.png" alt="Group2">
+						<img id="neon" src="/assets/images/greting/Ellipse 1.png" alt="Ellipse1">
+						<img id="skill" src="/assets/images/greting/Group 2.png" alt="Group2">
 					</div>
 				</div>
 			</div>
 	</div>
+
 	<article class="skills">
 		<div class="skills_content">
 			<div class="skills_list">
@@ -116,55 +125,11 @@
 		</div>
 	</article>
 
-	<article class="portfolio">
+	<article id="product" class="portfolio">
 		<div class="portfolio_container">
 			<div class="portfolio_item">
 				<div class="item_img">
-					<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				</div>
-				<div class="item_title">
-					<h1>Лендинг</h1>
-					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
-						родного точках однажды пунктуация заглавных эта злых мир.</p>
-					<button><a href="ваш-климат.online">Перейти</a></button>
-				</div>
-			</div>
-			<div class="portfolio_item">
-				<div class="item_title">
-					<h1>Лендинг</h1>
-					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
-						родного точках однажды пунктуация заглавных эта злых мир.</p>
-					<button><a href="ваш-климат.online">Перейти</a></button>
-				</div>
-				<div class="item_img">
-					<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				</div>
-			</div>
-			<div class="portfolio_item">
-				<div class="item_img">
-					<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				</div>
-				<div class="item_title">
-					<h1>Корпоративный</h1>
-					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
-						родного точках однажды пунктуация заглавных эта злых мир.</p>
-					<button><a href="ваш-климат.online">Перейти</a></button>
-				</div>
-			</div>
-			<div class="portfolio_item">
-				<div class="item_title">
-					<h1>Визитка</h1>
-					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
-						родного точках однажды пунктуация заглавных эта злых мир.</p>
-					<button><a href="ваш-климат.online">Перейти</a></button>
-				</div>
-				<div class="item_img">
-					<img src=".//assets/images/portfolio/your-climat.png" alt="">
-				</div>
-			</div>
-			<div class="portfolio_item">
-				<div class="item_img">
-					<img src=".//assets/images/portfolio/your-climat.png" alt="">
+					<img src="/assets/images/portfolio/your-climat.png" alt="">
 				</div>
 				<div class="item_title">
 					<h1>Лендинг</h1>
@@ -173,32 +138,79 @@
 					<button><a href="https://ваш-климат.online">Перейти</a></button>
 				</div>
 			</div>
+			<div class="portfolio_item">
+				<div class="item_title">
+					<h1>Лендинг</h1>
+					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
+						родного точках однажды пунктуация заглавных эта злых мир.</p>
+					<button><a href="https://sergey-okey.github.io/sistema-center.ru-case_4/">Перейти</a></button>
+				</div>
+				<div class="item_img">
+					<img src="/assets/images/portfolio/your-climat.png" alt="">
+				</div>
+			</div>
+			<div class="portfolio_item">
+				<div class="item_img">
+					<img src="/assets/images/portfolio/case1.png" alt="">
+				</div>
+				<div class="item_title">
+					<h1>Корпоративный</h1>
+					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
+						родного точках однажды пунктуация заглавных эта злых мир.</p>
+					<button><a href="https://sergey-okey.github.io/Case_1/">Перейти</a></button>
+				</div>
+			</div>
+			<div class="portfolio_item">
+				<div class="item_title">
+					<h1>Визитка</h1>
+					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
+						родного точках однажды пунктуация заглавных эта злых мир.</p>
+					<button><a href="https://sergey-okey.github.io/Case_2/">Перейти</a></button>
+				</div>
+				<div class="item_img">
+					<img src="/assets/images/portfolio/case2.png" alt="">
+				</div>
+			</div>
+			<div class="portfolio_item">
+				<div class="item_img">
+					<img src="/assets/images/portfolio/case3.png" alt="">
+				</div>
+				<div class="item_title">
+					<h1>Лендинг</h1>
+					<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Подзаголовок ведущими
+						родного точках однажды пунктуация заглавных эта злых мир.</p>
+					<button><a href="https://sergey-okey.github.io/case-3-react-scss.../">Перейти</a></button>
+				</div>
+			</div>
 		</div>
 	</article>
 
-	<article class="about">
+	<article id="about" class="about">
 		<div class="about_container">
-			<div class="about_title">
-				<img src=".//assets/images/about/logo.jpg" alt="about logo">
-			</div>
+			<h1 class="animated-heading">Почему я?</h1>
 			<div class="about_items">
-				<img id="yellow" src=".//assets/images/about/Ellipse yellow.png" alt="Ellipse yellow">
-				<img id="blue" src=".//assets/images/about/Ellipse blue.png" alt="Ellipse blue">
-				<img id="white" src=".//assets/images/about/Ellipse wite.png" alt="Ellipse white">
+				<img id="yellow" src="/assets/images/about/Ellipse yellow.png" alt="Ellipse yellow">
+				<img id="blue" src="/assets/images/about/Ellipse blue.png" alt="Ellipse blue">
+				<img id="white" src="/assets/images/about/Ellipse wite.png" alt="Ellipse white">
 				<div class="item_container">
 					<div class="item" data-aos="fade-right" data-aos-delay="100">
+						<img src="/assets/images/about/experience.png" alt="experience">
 						<span>Опыт больше 2 лет.</span>
 					</div>
 					<div class="item" data-aos="fade-right" data-aos-delay="200">
+						<img src="/assets/images/about/diploma.png" alt="diploma">
 						<span>Имею диплом государственного образца, школы Sinergy.</span>
 					</div>
 					<div class="item" data-aos="fade-right" data-aos-delay="300">
+						<img src="/assets/images/about/term.png" alt="term">
 						<span>Уделяю особое внимание срокам и качеству выполнения.</span>
 					</div>
 					<div class="item" data-aos="fade-right" data-aos-delay="400">
+						<img src="/assets/images/about/customers.png" alt="">
 						<span>Мной довольный более 128+ клиентов.</span>
 					</div>
 					<div class="item" data-aos="fade-right" data-aos-delay="500">
+						<img src="/assets/images/about/addition.png" alt="">
 						<span>Администрирую и дополняю выполненные проекты.</span>
 					</div>
 				</div>
@@ -207,7 +219,7 @@
 	</article>
 
 	</main>
-	<footer class="footer">
+	<footer id="contact" class="footer">
 		<div class="footer_container">
 			<div class="section_nav">
 				<div class="logo">
@@ -235,13 +247,25 @@
 			</div>
 			<div class="section_link">
 				<span>Copyright <a href="sergey-okey.ru">@SOK</a> 2024, Все права защищены</span>
-				<a href="">GitHub</a>
-				<a href="">Vk</a>
-				<a href="">Telegram</a>
-				<a href="">#gram</a>
+				<div>
+					<img src="/assets/images/footer/github.png" alt="">
+					<a href="">GitHub</a>
+				</div>
+				<div>
+					<img src="/assets/images/footer/vk.png" alt="vk">
+					<a href="">Vk</a>
+				</div>
+				<div>
+					<img src="/assets/images/footer/telegram.png" alt="">
+					<a href="">Telegram</a>
+				</div>
+				<div><img src="/assets/images/footer/instagram.png" alt="">
+					<a href="">#gram</a>
+				</div>
 			</div>
 		</div>
 	</footer>
+
 </body>
 
 </html>
