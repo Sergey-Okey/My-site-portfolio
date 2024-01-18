@@ -1,20 +1,19 @@
-var isOpen = false;
-
 function openSidebar() {
-	if (!isOpen) {
-		document.querySelector('.sidebar').style.display = 'block';
-		isOpen = true;
+	if (window.innerWidth >= 768) {
+		document.querySelector('.sidebar_desktop').style.display = 'block';
+	} else {
+		document.querySelector('.sidebar_mobile').style.display = 'block';
 	}
 }
 
 function closeSidebar() {
-	// Переместите присвоение обработчика события за пределы функции closeSidebar
-	document.querySelector('.close-btn').addEventListener('click', function () {
-		document.querySelector('.sidebar').style.display = 'none';
-		isOpen = false;
-	});
+	document.querySelector('.sidebar_desktop').style.display = 'none';
+	document.querySelector('.sidebar_mobile').style.display = 'none';
 }
-
+function activateLink(link) {
+	closeSidebar();
+	// Add any other logic you need when a link is clicked
+}
 // Вызовите функцию closeSidebar после полной загрузки DOM
 document.addEventListener('DOMContentLoaded', function () {
 	closeSidebar();

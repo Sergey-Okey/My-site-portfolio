@@ -5,7 +5,12 @@
 		overflow-x: hidden;
 	}
 
-	;
+	.header {
+		position: sticky;
+		top: 0;
+		background-color: #2f2f2f;
+		z-index: 3;
+	}
 
 	.header_content {
 		width: 95%;
@@ -43,7 +48,7 @@
 	}
 
 	.header_content {
-		.nav {
+		#nav {
 			display: none;
 		}
 	}
@@ -114,5 +119,14 @@
 		.section_link span {
 			text-align: center;
 		}
+	}
+
+	.sidebar_mobile {
+		display: block;
+		transition: height 0.3s ease-in-out;
+	}
+
+	.sidebar_desktop {
+		display: none;
 	}
 }

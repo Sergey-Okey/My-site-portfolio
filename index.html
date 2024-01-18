@@ -3,14 +3,15 @@
 
 <head>
 	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXLNVV4R7Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXLNVV4R7Y"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-  gtag('config', 'G-EXLNVV4R7Y');
-</script>
+		gtag('config', 'G-EXLNVV4R7Y');
+	</script>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SOK | Главная</title>
@@ -47,7 +48,7 @@
 				<img src=".//assets/images/header/sidebar-icon.png" alt="sidebar-icon" style="width: 40px;">
 			</div>
 
-			<div class="sidebar">
+			<div class="sidebar_desktop">
 				<span class="close-btn" onclick="closeSidebar()" style="float: right;">✖</span>
 				<h2>Обратная связь</h2>
 				<form action="feedback.php" method="post">
@@ -65,6 +66,17 @@
 					</div>
 					<input type="submit" value="Отправить" class="btn-sider">
 				</form>
+			</div>
+			<div class="sidebar_mobile">
+				<span class="close-btn" onclick="closeSidebar()" style="float: right;">✖</span>
+				<nav class="nav">
+					<ul>
+						<li><a href="index.html" onclick="activateLink(this)">Главная</a></li>
+						<li><a href="#about" onclick="activateLink(this)">Обо мне</a></li>
+						<li><a href="#product" onclick="activateLink(this)">Проекты</a></li>
+						<li><a href="#contact" onclick="activateLink(this)">Контакты</a></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</header>

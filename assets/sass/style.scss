@@ -110,8 +110,42 @@ body {
 		}
 	}
 
-	.sidebar {
-		display: none;
+	.sidebar_mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #f2f2f2;
+		transition: right 0.5s ease;
+		background: $background1 no-repeat;
+		padding: 50px;
+		transition: right 0.5s ease;
+		z-index: 2;
+		display: flex;
+		border-bottom-left-radius: 30px;
+		border-bottom-right-radius: 30px;
+		transition: transform 0.3s ease-in-out;
+
+		ul {
+			flex-direction: column;
+			align-items: center;
+
+			li {
+				a {
+					font-size: 2rem;
+					font-weight: 700;
+				}
+
+				a:active {
+					.sidebar_mobile {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.sidebar_desktop {
 		position: absolute;
 		top: 0;
 		right: 0;
