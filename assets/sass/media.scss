@@ -2,27 +2,22 @@
 	body {
 		width: 100%;
 		margin: 0;
-		overflow-x: hidden;
-	}
-
-	.header.sticky {
-		transition: all 0.3s ease;
 	}
 
 	.sticky {
 		position: sticky;
 		top: 0;
-		background: #292929;
+		background-color: #2f2f2f;
 		z-index: 3;
-		box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.47);
-	}
-
-	.header_content {
-		width: 95%;
+		transition: all .5s ease;
 
 		h1 {
 			margin: 10px 0;
 		}
+	}
+
+	.header_content {
+		width: 95%;
 	}
 
 	main {
@@ -35,9 +30,8 @@
 		gap: 0;
 
 		.greting_prevew {
-			position: absolute;
 			z-index: -1;
-			opacity: 20%;
+			opacity: 0.2;
 			margin: 0;
 			width: 100%;
 

@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	fadeInElements();
 });
 
-
+//Link Animation Klick 
 document.addEventListener("DOMContentLoaded", function () {
 	// Обработчик событий для всех якорных ссылок
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -170,13 +170,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Header Sticky
 document.addEventListener('DOMContentLoaded', function () {
-	var header = document.querySelector('header');
+	var header = document.querySelector('.header');
 	var scrollPosition = 0;
 
 	function handleScroll() {
 		var newScrollPosition = window.scrollY;
 
-		if (newScrollPosition > 600 && newScrollPosition > scrollPosition) {
+		if (newScrollPosition > 500 && newScrollPosition > scrollPosition) {
 			header.classList.add('sticky');
 		} else {
 			header.classList.remove('sticky');
