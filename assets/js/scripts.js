@@ -167,3 +167,23 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
+//Header Sticky
+document.addEventListener('DOMContentLoaded', function () {
+	var header = document.querySelector('header');
+	var scrollPosition = 0;
+
+	function handleScroll() {
+		var newScrollPosition = window.scrollY;
+
+		if (newScrollPosition > 600 && newScrollPosition > scrollPosition) {
+			header.classList.add('sticky');
+		} else {
+			header.classList.remove('sticky');
+		}
+
+		scrollPosition = newScrollPosition;
+	}
+
+	window.addEventListener('scroll', handleScroll);
+});
