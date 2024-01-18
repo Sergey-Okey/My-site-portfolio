@@ -12,9 +12,8 @@ function closeSidebar() {
 }
 function activateLink(link) {
 	closeSidebar();
-	// Add any other logic you need when a link is clicked
 }
-// Вызовите функцию closeSidebar после полной загрузки DOM
+// Вызов функции closeSidebar после полной загрузки DOM
 document.addEventListener('DOMContentLoaded', function () {
 	closeSidebar();
 });
