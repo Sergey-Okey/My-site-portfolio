@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //Skills Animation
-
 document.addEventListener("DOMContentLoaded", function () {
 	var items = document.querySelectorAll(".portfolio_item");
 
@@ -27,26 +26,29 @@ document.addEventListener("DOMContentLoaded", function () {
 		items.forEach(function (item, index) {
 			var position = item.getBoundingClientRect();
 			var windowCenter = window.innerHeight / 2;
+			var isMobile = window.innerWidth < 768;
 
 			// Проверяем, виден ли элемент
 			if (position.top < windowCenter && position.bottom > windowCenter) {
 				// Применяем анимацию
 				item.style.transition = "opacity 0.9s, transform 0.5s";
 				item.style.opacity = 1;
-				item.style.transform = "translateX(-10%)";
+				item.style.transform = "translateX(" + (isMobile ? "-11%" : "0%") + ")";
 			} else {
 				// Возвращаем не видимые элементы в центр
 				item.style.transition = "none";
 				item.style.opacity = 0;
-				item.style.transform = index % 2 === 0 ? "translateX(-50%)" : "translateX(50%)";
+				item.style.transform = index % 2 === 0 ? (isMobile ? "translateX(-50%)" : "translateX(0%)") : (isMobile ? "translateX(50%)" : "translateX(0%)");
 			}
 		});
 	}
 
 	// Вызываем функцию при загрузке страницы и при прокрутке
 	window.addEventListener("scroll", checkVisibility);
+	window.addEventListener("resize", checkVisibility); // Добавляем обработчик изменения размера окна
 	checkVisibility();
 });
+
 
 //Animation about item
 
