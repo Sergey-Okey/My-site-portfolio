@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				// Применяем анимацию
 				item.style.transition = "opacity 0.9s, transform 0.5s";
 				item.style.opacity = 1;
-				item.style.transform = "translateX(-11%)";
+				item.style.transform = "translateX(-10%)";
 			} else {
 				// Возвращаем не видимые элементы в центр
 				item.style.transition = "none";
