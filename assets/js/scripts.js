@@ -195,3 +195,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Animation Pointer
 
+function updateProgressBar(event) {
+	const progressBar = document.querySelector(".progress-bar");
+	const progress = document.querySelector(".progress");
+	const points = document.querySelectorAll(".point");
+
+	let mouseX = event.pageX - progressBar.offsetLeft;
+	let width = (mouseX / progressBar.offsetWidth) * 100 + "%";
+	progress.style.width = width;
+
+	points.forEach((point) => {
+		if (mouseX >= point.offsetLeft) {
+			point.style.backgroundColor = "#66ccff";
+		} else {
+			point.style.backgroundColor = "#66ccff";
+		}
+	});
+}
