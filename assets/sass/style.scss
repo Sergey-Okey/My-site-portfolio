@@ -215,13 +215,18 @@ body {
 	display: flex;
 
 	#skill {
-		width: 550px;
+		width: 300px;
 		position: absolute;
+		top: 6rem;
+		left: 7rem;
 	}
 
 	#neon {
-		width: 550px;
+		width: 750px;
 		position: absolute;
+		top: -7rem;
+		left: -6rem;
+		z-index: -1;
 	}
 }
 
