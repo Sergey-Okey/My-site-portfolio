@@ -212,3 +212,7 @@ function updateProgressBar(event) {
 		}
 	});
 }
+
+
+//Animation Work
+

@@ -29,6 +29,7 @@ body {
 	margin: 0 auto;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
+	user-select: none;
 }
 
 .header_content {
@@ -300,6 +301,10 @@ body {
 		flex-direction: column;
 		align-items: center;
 		gap: 20px;
+
+		h1 {
+			font-size: 3rem;
+		}
 
 		.skills_list {
 			display: flex;
@@ -620,7 +625,7 @@ body {
 
 //Progress 
 .additions {
-	padding: 100px 0;
+	padding-top: 50px;
 
 	.additions_container {
 		display: flex;
@@ -635,60 +640,96 @@ body {
 
 		img {
 			width: 70%;
+			border-radius: 30px;
 		}
 	}
+}
 
-	.progress-container {
-		width: 100%;
+//Work
+
+.work {
+	h1 {
 		text-align: center;
+		font-size: 3rem;
+		margin-bottom: 5rem;
 	}
 
-	.progress-bar {
-		background-color: #f2f2f2;
-		border-radius: 20px;
+	p {
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	ol {
+		list-style: none;
+		counter-reset: list;
+		padding: 0 1rem;
+	}
+
+	li {
+		--stop: calc(100% / var(--length) * var(--i));
+		--l: 62%;
+		--l2: 88%;
+		--h: calc((var(--i) - 1) * (180 / var(--length)));
+		--c1: hsl(var(--h), 71%, var(--l));
+		--c2: hsl(var(--h), 71%, var(--l2));
+
 		position: relative;
-		width: 100%;
-		height: 20px;
-		margin: auto;
-		margin-top: 20px;
+		counter-increment: list;
+		max-width: 45rem;
+		margin: 2rem auto;
+		padding: 2rem 1rem 1rem;
+		box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+		border-radius: 30px;
 		overflow: hidden;
+		background-color: $background1;
 	}
 
-	.progress {
+	li::before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1rem;
 		position: absolute;
-		height: 100%;
-		background-color: $accent;
-		border-radius: 15px;
-		transition: width 0.9s;
-	}
-
-	.point {
-		width: 30px;
-		height: 30px;
-		border-radius: 50%;
-		background-color: #FFF;
 		top: 0;
-		transition: background-color 0.3s;
-		cursor: pointer;
+		left: 0;
+		background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
 	}
 
-	.points {
-		width: 100%;
-		position: relative;
+	h3 {
 		display: flex;
-		justify-content: space-around;
-		width: 100%;
-		height: 100%;
+		align-items: center;
+		margin: 0 0 1rem;
+		color: rgb(255, 254, 254);
 	}
 
-	.point-names {
+	h3::before {
 		display: flex;
-		justify-content: space-between;
-		width: 80%;
-		margin: auto;
-		margin-top: 10px;
+		justify-content: center;
+		align-items: center;
+		flex: 0 0 auto;
+		margin-right: 1rem;
+		width: 3rem;
+		height: 3rem;
+		content: counter(list);
+		padding: 1rem;
+		border-radius: 50%;
+		background-color: $accent;
+		color: white;
 	}
 
+	@media (min-width: 40em) {
+		li {
+			margin: 3rem auto;
+			padding: 3rem 2rem 2rem;
+		}
 
+		h3 {
+			font-size: 2.25rem;
+			margin: 0 0 2rem;
+		}
 
+		h3::before {
+			margin-right: 1.5rem;
+		}
+	}
 }

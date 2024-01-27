@@ -4,12 +4,11 @@
 		margin: 0;
 	}
 
-	.sticky {
+	.header {
 		position: sticky;
 		top: 0;
 		background-color: #2f2f2f;
-		z-index: 3;
-		transition: top .5s ease;
+		z-index: 2;
 
 		h1 {
 			margin: 10px 0;
